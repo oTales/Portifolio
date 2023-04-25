@@ -31,15 +31,134 @@ list-style: none;
    flex: 1 200px;
    gap:200px ;
    flex-wrap: wrap;
+   height: 80vh;
+   align-items: center;
 }
 .texto{
    max-width: 500px;
    text-align: justify;
+   font-weight: 500;
 }
 .stacks{
    text-align: center;
-
 }
 .stacks p{
    margin: 15px 0;
+}
+.cards{
+   text-align: center;
+   display: flex;
+   flex: 1 200px;
+   gap: 1.2rem;
+   flex-wrap: wrap;
+   margin: 20px auto;
+   justify-content: center;
+   
+}
+
+section{
+   text-align: center;
+   margin: 100px auto;
+}
+
+.seta{
+   margin: 30px auto;
+height: 20vh;
+   justify-content: center;
+   display: flex;
+   
+}
+.seta img{
+   height:50px ;
+   width: 50px;
+}
+.cards div{
+   max-width: 400px;
+background: rgba(11, 28, 58, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.3px);
+-webkit-backdrop-filter: blur(7.3px);
+border: 1px solid rgba(11, 28, 58, 0.2);
+
+   border-radius: 10px;
+   padding: 10px;
+  animation: opacidade 3s;
+}
+
+#digitador{
+   display: flex;
+   margin: 0 auto;
+   justify-content: center;
+   align-items: center;
+}
+@keyframes opacidade  {
+   from{
+      top: 80px;
+      margin: -30px;
+      opacity: 0;
+   }to{
+      top: 0;
+      margin: 0;
+      opacity: 1;
+   }
+}
+
+#hamburger {
+   border-top: 2px solid;
+   width: 20px;
+ }
+ #hamburger::after,
+ #hamburger::before {
+   content: '';
+   display: block;
+   width: 20px;
+   height: 2px;
+   background: currentColor;
+   margin-top: 5px;
+   transition: 0.7s;
+   position: relative;
+ }
+ #btn-mobile {
+   display: flex;
+   padding: 0.5rem 1rem;
+   font-size: 1rem;
+   border: none;
+   background: none;
+   cursor: pointer;
+   gap: 0.5rem;
+   color: #fff;
+   display: none;
+ }
+
+/* MEDIA */
+@media (max-width:600px) {
+   #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+      
+    }
+    .navbar{
+      display: none;
+   }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.7s;
+      position: relative;
+
+    }
+    #btn-mobile{
+      display: flex;
+    }
+    #nav.active #nav {
+      height: 40vh;
+      visibility: visible;
+      margin-right: 300px;
+    }
 }
