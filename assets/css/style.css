@@ -9,15 +9,20 @@ body {
    color: white;
    font-family: 'Lato', sans-serif;;
 }
-.navbar{
+#menu{
    display: flex;
    justify-content: space-between;
 }
-.navbar ul{
+#nav ul{
 display: flex;
 list-style: none;
+
 }
-.navbar li{
+#menu a{
+   text-decoration: none;
+   color: white;
+}
+#menu li{
    padding: 10px;
 }
 .TalesDev{
@@ -26,12 +31,11 @@ list-style: none;
 }
 .principal{
    display: flex;
-   margin: 30px auto;
    justify-content: center;
    flex: 1 200px;
    gap:200px ;
    flex-wrap: wrap;
-   height: 80vh;
+   height: 100vh;
    align-items: center;
 }
 .texto{
@@ -59,6 +63,8 @@ list-style: none;
 section{
    text-align: center;
    margin: 100px auto;
+   height: 500px;
+   max-width: 1300px;
 }
 
 .seta{
@@ -73,7 +79,8 @@ height: 20vh;
    width: 50px;
 }
 .cards div{
-   max-width: 400px;
+   text-align: justify;
+   max-width: 300px;
 background: rgba(11, 28, 58, 0.61);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -85,7 +92,12 @@ border: 1px solid rgba(11, 28, 58, 0.2);
    padding: 10px;
   animation: opacidade 3s;
 }
-
+.cards div h3 {
+   text-align: center;
+}
+.soft-skills{
+   margin: 150px auto;
+}
 #digitador{
    display: flex;
    margin: 0 auto;
@@ -120,7 +132,7 @@ border: 1px solid rgba(11, 28, 58, 0.2);
    position: relative;
  }
  #btn-mobile {
-   display: flex;
+   display: none;
    padding: 0.5rem 1rem;
    font-size: 1rem;
    border: none;
@@ -128,9 +140,18 @@ border: 1px solid rgba(11, 28, 58, 0.2);
    cursor: pointer;
    gap: 0.5rem;
    color: #fff;
-   display: none;
+   z-index: 1200;
  }
-
+ *::-webkit-scrollbar {
+   width: 5px;
+ }
+ 
+ 
+ *::-webkit-scrollbar-thumb {
+   background-color: rgb(49, 49, 49);
+   border-radius: 20px;
+   
+ }
 /* MEDIA */
 @media (max-width:600px) {
    #hamburger {
@@ -138,9 +159,30 @@ border: 1px solid rgba(11, 28, 58, 0.2);
       width: 20px;
       
     }
-    .navbar{
-      display: none;
-   }
+   
+   #menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+   height: 0px;
+    width: 100%;
+    transition: 1s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-x: hidden;
+    background: #00000b;
+  }
+  #menu ul {
+   flex-direction: column;
+   align-items: center;
+  }
+#menu #redes{ 
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin:200px auto;
+   
+}
     #hamburger::after,
     #hamburger::before {
       content: '';
@@ -149,16 +191,26 @@ border: 1px solid rgba(11, 28, 58, 0.2);
       height: 2px;
       background: currentColor;
       margin-top: 5px;
-      transition: 0.7s;
+      transition: 1s;
       position: relative;
-
     }
     #btn-mobile{
       display: flex;
     }
-    #nav.active #nav {
-      height: 40vh;
+    #nav.active #menu {
+      height: 100%;
       visibility: visible;
       margin-right: 300px;
+      overflow-x: hidden;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
     }
 }
