@@ -5,8 +5,88 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&family=Lato:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/contato.css">
+  
 </head>
 <body>
+   <header>
+         
+      <nav id="nav" >
+         <button id="btn-mobile">
+            <span id="hamburger"> </span>
+        </button>
+        <div id="menu">
+         
+         <ul>
+           
+         
+            <a href="./index.html"><li>Home</li></a>
+            <a href="./projetos.html"><li>Projetos</li></a>
+            <a href="./contato.html"><li>Contato</li></a>
+         </ul>
+         <ul class="TalesDev">
+            <li><span id="digitador"></span></li>
+         </ul>
+         <ul id="redes">
+            <li>
+               <a href=""
+                  ><img
+                     src="./assets/images/logotipo-do-github1.svg"
+                     alt=""
+               /></a>
+            </li>
+            <li>
+               <a href=""
+                  ><img
+                     src="./assets/images/image6.svg"
+                     alt=""
+               /></a>
+            </li>
+            <li>
+               <a href=""
+                  ><img
+                     src="./assets/images/image8.svg"
+                     alt=""
+               /></a>
+            </li>
+         </ul>
+         </div>
+      </nav>
+   </header>
+      
+   <main class="container">
+   <form
+  action="https://formspree.io/f/mgebdvpp"
+  method="POST"
+>
+<div>
+ <label for="">
+   Seu nome
+   <input placeholder="Escreva seu nome" type="text" name="name" required>
+ </label>
+
+   <label for="">
+      Seu e-mail
+      <input placeholder="Escreva seu e-mail" type="email" name="email" required>
+   </label>
    
+</div>
+ <h4>Assunto</h4>
+   <input placeholder="Coloque aqui o assunto" type="text" name="subject" required>
+
+ <h3>Mensagem</h3>
+    <textarea placeholder="Mande sua mensagem" required name="message" rows="15" cols="50"></textarea>
+  
+  <!-- your other form fields go here -->
+  <button type="submit">Enviar</button>
+</form>
+</main>
+<script src="./assets/javascript/digitador.js"></script>
+<script src="./assets/javascript/script.js"></script>
 </body>
 </html>
