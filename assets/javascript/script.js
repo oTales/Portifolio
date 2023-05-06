@@ -1,5 +1,9 @@
 const btnMobile = document.getElementById('btn-mobile');
+const voltarTopo = document.querySelector('.voltar-topo');
 
+voltarTopo.addEventListener('click', () => {
+   window.scrollTo(0,0);
+});
 function toggleMenu(event) {
    if (event.type === 'touchstart') event.preventDefault();
    const nav = document.getElementById('nav');
