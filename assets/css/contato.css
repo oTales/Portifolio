@@ -1,14 +1,22 @@
 .container{
    text-align: center;
+   align-items: center;
+   justify-content: center;
+   display: flex;
 }
-
+h1{
+   text-align: center;
+   display: block;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 100px auto;
+}
 form {
    display: flex;
    flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin: 200px auto;
+   margin: 50px 10px;
    padding: 10px;
+   max-width: 500px;
 }
 form input {
    border-radius:5px ;
@@ -25,6 +33,7 @@ form textarea{
    margin-top: 10px;
    font-size: 1rem;
    padding: 5px;
+   width: 100%;
 }
 h3{
    margin-top: 10px;
@@ -57,4 +66,10 @@ button{
    font-size: 1rem;
    color: white;
    cursor:pointer;
+   transition: 1s;
+}
+button:hover{
+   color: black;
+   background-color: white;
+   
 }
